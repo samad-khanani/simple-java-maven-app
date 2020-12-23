@@ -9,6 +9,7 @@ pipeline {
   stages {
     stage('Prep') {
       steps {
+        sh 'cat /proc/version'
         sh 'yum update -y'
         sh 'yum install -y docker'
         sh 'service docker start'
