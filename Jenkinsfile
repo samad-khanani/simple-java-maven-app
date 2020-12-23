@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Prep') {
       steps {
-        sh 'sudo yum update -y'
+        sh 'yum update -y'
         sh 'yum install -y docker'
         sh 'service docker start'
       }
